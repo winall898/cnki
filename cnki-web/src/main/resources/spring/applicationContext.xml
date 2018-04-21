@@ -84,12 +84,4 @@
 	<import resource="spring-mq.xml" />
 	<import resource="spring-shiro.xml" />
 	<import resource="spring-redis.xml" />
-	
-	<!-- dubbo配置 -->
-	<dubbo:application name="consumer-of-search-app"/>
-	<dubbo:monitor protocol="registry"/>
-	<dubbo:registry client="curator" address="${dubbo.registry.address}" file="search_dubbo.cache" check="${dubbo.registry.check}"/>
-	<dubbo:consumer timeout="10000" retries="0" check="${dubbo.consumer.check}"/>
-	<dubbo:reference id="baseProductRemoteService" interface="com.kmzyc.promotion.remote.service.BaseProductRemoteService" check="false"/>
-	<dubbo:reference id="presellInfoRemoteService" interface="com.kmzyc.promotion.remote.service.PresellInfoRemoteService" check="false"/>
 </beans>
