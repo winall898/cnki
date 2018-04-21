@@ -7,21 +7,6 @@
         <dependent-module archiveName="cnki-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cnki-common/cnki-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="kmzyc-cms-api-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-cms-api/kmzyc-cms-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-common-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-common/kmzyc-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-product-api-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-product-api/kmzyc-product-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-promotion-api-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-promotion-api/kmzyc-promotion-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-search-common-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-search-common/kmzyc-search-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="cnki-admin"/>
         <property name="java-output-path" value="/cnki-admin/target/classes"/>
     </wb-module>

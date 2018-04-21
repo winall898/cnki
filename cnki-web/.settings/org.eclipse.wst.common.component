@@ -7,15 +7,6 @@
         <dependent-module archiveName="cnki-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cnki-common/cnki-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="kmzyc-product-api-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-product-api/kmzyc-product-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-common-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-common/kmzyc-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="kmzyc-promotion-api-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kmzyc-promotion-api/kmzyc-promotion-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="cnki-web"/>
         <property name="java-output-path" value="/cnki-web/target/classes"/>
     </wb-module>
