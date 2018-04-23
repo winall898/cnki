@@ -6,10 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.collections.MapUtils;
-import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,9 +17,6 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.constants.MemCacheKeys;
-import com.kmzyc.search.facade.util.MemCache;
-import com.kmzyc.search.facade.vo.Category;
 import com.kmzyc.search.param.HTTPParam;
 import com.kmzyc.search.param.ModelAttribute;
 import com.kmzyc.search.vo.Facter;
@@ -36,9 +30,6 @@ public class BaseController extends AbstractController {
     protected static final Logger searchLog = LoggerFactory.getLogger("search-log");
 
     protected static final Logger LOG = LoggerFactory.getLogger(BaseController.class);
-
-    @Resource(name = "memCache")
-    protected MemCache memCache;
 
     /**
      * 判断请求是否包含指定参数
@@ -81,94 +72,6 @@ public class BaseController extends AbstractController {
         return StringUtils.isNotBlank(isFilte);
     }
 
-    /**
-     * 生成面包屑
-     * 
-     * @param prefix
-     */
-    protected Map<String, String> getBreadVal(String prefix, Channel channel) {
-        Map<String, String> breadMap = Maps.newLinkedHashMap();
-        Map<String, String> ocMap = memCache.getOpraCategoryMap(channel.name());
-        breadMap.put(prefix, "全部结果");
-        StringBuilder href = new StringBuilder(prefix);
-
-        boolean hasC2 = false;
-        String c3 = getParameter(HTTPParam.c3.name());
-        if (StringUtils.isNotBlank(c3)) {
-            if (null != ocMap) {
-                // 获取2级运营类目
-                int index = c3.lastIndexOf('_');
-                String key2 = c3.substring(0, index);
-                String name2 = ocMap.get(key2);
-                if (StringUtils.isNotBlank(name2)) {
-                    href.append("&c2=" + key2);
-                    String key = href.toString();
-                    breadMap.put(key, name2);
-                    hasC2 = true;
-                }
-                // 获取3级运营类目
-                String name3 = ocMap.get(c3);
-                if (StringUtils.isNotBlank(name3)) {
-                    href.append("&c3=" + c3);
-                    String key = href.toString();
-                    breadMap.put(key, name3);
-                }
-            } else {
-                LOG.warn("无法获取缓存内容，KEY: " + MemCacheKeys.SEARCH_OPRATION_CATEGORY);
-            }
-        }
-
-        String c2 = getParameter(HTTPParam.c2.name());
-        if (!hasC2 && StringUtils.isNotBlank(c2) && ocMap != null) {// 获取2级运营类目
-            String name = ocMap.get(c2);
-            if (StringUtils.isNotBlank(name)) {
-                href.append("&c2=" + c2);
-                String key = href.toString();
-                breadMap.put(key, name);
-            }
-        }
-
-        String brandName = breadMap.remove("brandName"); // 品牌
-        if (StringUtils.isNotBlank(brandName)) {
-            href.append("&brandName=" + brandName);
-            breadMap.put(href.toString(), brandName);
-        }
-        return breadMap;
-    }
-
-    /**
-     * 获取运营类目搜索的面包屑
-     * 
-     * @param oid
-     */
-    protected Map<String, String> getOperaBreadVal(String oid, Channel channel) {
-
-        Map<String, String> bread = Maps.newLinkedHashMap();
-
-        String href = new String("operCateSearch.action?oid=");
-        Map<Integer, Category> opercate = memCache.getPublishedOperationCategory(channel.name());
-        if (null == opercate) {
-            LOG.warn("无法获取所有CMS发布的运营类目信息");
-            return bread;
-        }
-        Category third = opercate.get(NumberUtils.toInt(oid));
-        if (null != third) {
-            Category second = opercate.get(third.getParentId());
-            if (null != second) {
-                Category first = opercate.get(second.getParentId());
-                if (null != first) {
-                    bread.put(href + first.getId(), first.getName());
-
-                }
-                bread.put(href + second.getId(), second.getName());
-            }
-            bread.put(href + third.getId(), third.getName());
-        } else {
-            LOG.warn("无法生成面包屑。");
-            LOG.warn("无法获取所有CMS发布的运营类目信息");
-        }
-        return bread;
-    }
 
     /**
      * 判断是否搜索到结果

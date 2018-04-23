@@ -71,12 +71,7 @@
 			<artifactId>commons-trie</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.elasticsearch</groupId>
-			<artifactId>elasticsearch</artifactId>
-			<version>2.3.1</version>			
-		</dependency>
-
+		
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -269,16 +264,6 @@
 			<artifactId>guava</artifactId>
 			<version>18.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.curator</groupId>
-			<artifactId>curator-framework</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.curator</groupId>
-			<artifactId>curator-recipes</artifactId>
-			<version>2.11.0</version>
-		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -364,38 +349,6 @@
 			<artifactId>hystrix-request-servlet</artifactId>
 			<version>1.4.0-RC5</version>
 		</dependency>
-		
-		<dependency>
-             <groupId>com.alibaba</groupId>
-             <artifactId>dubbo</artifactId>
-             <version>2.8.4.1</version>
-             <exclusions>
-                 <exclusion>
-                     <artifactId>spring</artifactId>
-                     <groupId>org.springframework</groupId>
-                 </exclusion>
-                 <exclusion>
-                     <groupId>org.javassist</groupId>
-                     <artifactId>javassist</artifactId>
-                 </exclusion>
-                 <exclusion>
-                     <groupId>org.slf4j</groupId>
-                     <artifactId>slf4j-api</artifactId>
-                 </exclusion>
-                 <exclusion>
-                     <groupId>log4j</groupId>
-                     <artifactId>log4j</artifactId>
-                 </exclusion>
-                 <exclusion>
-                     <groupId>commons-logging</groupId>
-                     <artifactId>commons-logging</artifactId>
-                 </exclusion>
-                 <exclusion>
-                     <groupId>io.netty</groupId>
-                     <artifactId>netty</artifactId>
-                 </exclusion>
-           	</exclusions>
-        </dependency>
         
         <dependency>
     		<groupId>org.tuckey</groupId>
