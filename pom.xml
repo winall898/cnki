@@ -62,34 +62,46 @@
 	</plugins>
   </build>
   
-  <repositories>
+  <distributionManagement>
 	<repository>
-		<id>public</id>
-		<name>public</name>
-		<url>http://176.122.188.221:8081/nexus/content/repositories/public/</url>
-		<layout>default</layout>
-		<releases>
-			<enabled>true</enabled>
-		</releases>
+		<id>Release</id>
+		<name>Release</name>
+		<url>http://176.122.188.221:8081/nexus/content/repositories/Release/</url>
 	</repository>
-	<repository>
+	<snapshotRepository>
 		<id>Snapshots</id>
 		<name>Snapshots</name>
-		<url>http://176.122.188.221/nexus/content/repositories/snapshots/</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
+		<url>http://176.122.188.221:8081/nexus/content/repositories/snapshots/</url>
+	</snapshotRepository>
+  </distributionManagement>
+	
+  <repositories>  
+	<repository>   
+		<id>public</id>  
+		<name>Public Repositories</name>  
+		<url>http://176.122.188.221:8081/nexus/content/groups/public/</url> 
+		<releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots> 				
 	</repository>
-	<repository>
-		<id>central</id>
-		<name>Maven Repository Switchboard</name>
-		<layout>default</layout>
-		<url>http://repo1.maven.org/maven2</url>
-		<snapshots>
-			<enabled>false</enabled>
-		</snapshots>
-	</repository>
-  </repositories>
+  </repositories> 
+		
+  <pluginRepositories>  
+	<pluginRepository>  
+		<id>public</id>  
+		<name>Public Repositories</name>  
+		<url>http://176.122.188.221:8081/nexus/content/groups/public/</url>  
+		<releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+	</pluginRepository>
+  </pluginRepositories>  
 	
   <modules>
     <module>cnki-common</module>
