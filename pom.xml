@@ -66,7 +66,7 @@
 	<repository>
 		<id>public</id>
 		<name>public</name>
-		<url>http://10.1.6.144:8081/nexus/content/repositories/public/</url>
+		<url>http://176.122.188.221:8081/nexus/content/repositories/public/</url>
 		<layout>default</layout>
 		<releases>
 			<enabled>true</enabled>
@@ -75,7 +75,7 @@
 	<repository>
 		<id>Snapshots</id>
 		<name>Snapshots</name>
-		<url>http://10.1.6.144:8081/nexus/content/repositories/snapshots/</url>
+		<url>http://176.122.188.221/nexus/content/repositories/snapshots/</url>
 		<snapshots>
 			<enabled>true</enabled>
 		</snapshots>
