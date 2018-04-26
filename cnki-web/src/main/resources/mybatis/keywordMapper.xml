@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.kmzyc.search.app.dao.KeywordDao" >
-  	<resultMap id="keywordResultMap" type="com.kmzyc.search.app.model.KeywordVo" >
+<mapper namespace="com.cnki.dao.KeywordDao" >
+  	<resultMap id="keywordResultMap" type="com.cnki.model.KeywordVo" >
 	    <id column="ID" property="id"/>
 	    <result column="KEYWORD" property="keyword"/>
 	    <result column="DESCRIPTION" property="description"/>

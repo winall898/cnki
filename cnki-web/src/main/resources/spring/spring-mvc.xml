@@ -34,10 +34,9 @@
 	</bean>	
     	
     <!--对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 --> 
-   	<context:component-scan base-package="com.kmzyc.search.app.action" use-default-filters="false">
+   	<context:component-scan base-package="com.cnki.action" use-default-filters="false">
 		<context:include-filter expression="org.springframework.stereotype.Controller"
 			type="annotation" />
-		<context:exclude-filter type="regex" expression="com.kmzyc.search.app.schedul.*" /> 
 	</context:component-scan>
       
     <mvc:annotation-driven>

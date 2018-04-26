@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.kmzyc.search.app.dao.StopwordDao" >
+<mapper namespace="com.cnki.dao.StopwordDao" >
   	<resultMap id="stopwordResultMap" type="com.kmzyc.search.app.model.StopwordVo" >
 	    <id column="ID" property="id"/>
 	    <result column="STOPWORD" property="stopword"/>
