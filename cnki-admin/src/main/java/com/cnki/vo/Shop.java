@@ -3,7 +3,7 @@ package com.cnki.vo;
 import java.io.Serializable;
 import java.util.List;
 
-import com.kmzyc.search.vo.ProductItem;
+import com.cnki.vo.ProductItem;
 
 public class Shop implements Serializable {
 

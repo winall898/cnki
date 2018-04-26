@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.admin.cache.CacheUtil;
+import com.cnki.config.Channel;
 import com.cnki.constants.APPResultKeys;
+import com.cnki.param.DocFieldName;
+import com.cnki.param.HTTPParam;
 import com.cnki.service.IAppESSearchService;
 import com.cnki.service.IOtherSystemService;
 import com.cnki.util.ParamUitl;
@@ -29,9 +32,6 @@ import com.cnki.vo.ReturnResult;
 import com.cnki.vo.Suggest;
 import com.google.common.cache.Cache;
 import com.google.common.collect.Maps;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.DocFieldName;
-import com.kmzyc.search.param.HTTPParam;
 
 /**
  * 手机端商品搜索接口

@@ -3,7 +3,7 @@ package com.kmzyc.search.app.service;
 import java.util.List;
 import java.util.Map;
 
-import com.kmzyc.search.config.Channel;
+import com.cnki.config.Channel;
 
 /**
  * 索引服务接口

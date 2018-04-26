@@ -4,7 +4,7 @@ public class Configuration {
 
     public static String getString(String key) {
 
-        return com.kmzyc.search.config.Configuration.getString(key);
+        return com.cnki.config.Configuration.getString(key);
     }
 
     /**
@@ -20,6 +20,6 @@ public class Configuration {
 
     public static int getInt(String name, int defaultValue) {
 
-        return com.kmzyc.search.config.Configuration.getInt(name, defaultValue);
+        return com.cnki.config.Configuration.getInt(name, defaultValue);
     }
 }

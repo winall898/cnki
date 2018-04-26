@@ -24,11 +24,11 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
+import com.cnki.param.DocFieldName;
+import com.cnki.param.ShopFieldName;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.kmzyc.search.app.service.ProductService;
-import com.kmzyc.search.param.DocFieldName;
-import com.kmzyc.search.param.ShopFieldName;
 
 @Service("productService")
 public class ProductServiceImpl implements ProductService {

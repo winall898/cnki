@@ -1,7 +1,7 @@
 package com.cnki.constants;
 
 import com.alibaba.fastjson.JSONObject;
-import com.kmzyc.search.param.DocFieldName;
+import com.cnki.param.DocFieldName;
 
 public class ESSortParam {
 

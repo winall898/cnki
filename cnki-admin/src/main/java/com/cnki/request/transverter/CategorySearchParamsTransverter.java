@@ -3,8 +3,8 @@ package com.cnki.request.transverter;
 import org.apache.commons.lang.StringUtils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.DocFieldName;
+import com.cnki.config.Channel;
+import com.cnki.param.DocFieldName;
 
 public class CategorySearchParamsTransverter extends RequestParamsTransverter {
 

@@ -18,17 +18,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.admin.cache.CacheUtil;
+import com.cnki.config.Channel;
 import com.cnki.constants.ESSortParam;
 import com.cnki.constants.JSPResource;
+import com.cnki.param.HTTPParam;
+import com.cnki.param.ModelAttribute;
 import com.cnki.service.IB2BESSearchService;
 import com.cnki.service.IOtherSystemService;
 import com.cnki.service.SearchDBDataService;
 import com.cnki.vo.Brand;
 import com.cnki.vo.Suggest;
 import com.google.common.cache.Cache;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.HTTPParam;
-import com.kmzyc.search.param.ModelAttribute;
 
 /**
  * 请求处理类

@@ -3,10 +3,10 @@ package com.cnki.request.transverter;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.config.Channel;
+import com.cnki.param.DocFieldName;
+import com.cnki.param.HTTPParam;
 import com.cnki.util.JsonUtil;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.DocFieldName;
-import com.kmzyc.search.param.HTTPParam;
 
 /**
  * 精确搜索参数处理类

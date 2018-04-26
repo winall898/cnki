@@ -9,9 +9,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.constants.ORDER;
 import com.cnki.constants.SupplierType;
+import com.cnki.param.DocFieldName;
 import com.cnki.request.IRequestTransverter;
 import com.cnki.util.ParamUitl;
-import com.kmzyc.search.param.DocFieldName;
 
 public class WapParamsTransverter implements IRequestTransverter {
 

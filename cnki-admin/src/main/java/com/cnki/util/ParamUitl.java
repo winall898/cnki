@@ -8,8 +8,8 @@ import java.util.Map.Entry;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.kmzyc.search.param.Action;
-import com.kmzyc.search.param.Params;
+import com.cnki.param.Action;
+import com.cnki.param.Params;
 
 
 

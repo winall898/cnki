@@ -10,9 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.cnki.config.Channel;
 import com.kmzyc.search.app.jms.MessageCustomer;
 import com.kmzyc.search.app.service.IndexService;
-import com.kmzyc.search.config.Channel;
 
 
 /**

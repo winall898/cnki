@@ -8,10 +8,10 @@ import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.config.Channel;
 import com.cnki.request.IRequestTransverter;
 import com.cnki.util.ParamUitl;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.util.PinyinUtil;
+import com.cnki.util.PinyinUtil;
 
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 

@@ -13,8 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.cnki.constants.SupplierType;
+import com.cnki.param.HTTPParam;
 import com.google.common.base.Splitter;
-import com.kmzyc.search.param.HTTPParam;
 
 /**
  * 搜索过滤参数处理JSTL标签

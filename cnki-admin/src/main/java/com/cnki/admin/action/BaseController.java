@@ -13,14 +13,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.cnki.config.Channel;
+import com.cnki.param.HTTPParam;
+import com.cnki.param.ModelAttribute;
+import com.cnki.vo.Facter;
+import com.cnki.vo.ProductItem;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.HTTPParam;
-import com.kmzyc.search.param.ModelAttribute;
-import com.kmzyc.search.vo.Facter;
-import com.kmzyc.search.vo.ProductItem;
 
 @Component
 public class BaseController extends AbstractController {

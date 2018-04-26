@@ -9,14 +9,14 @@ import org.apache.commons.lang3.time.FastDateFormat;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.config.Channel;
 import com.cnki.constants.ORDER;
 import com.cnki.constants.SupplierType;
+import com.cnki.param.DocFieldName;
+import com.cnki.param.HTTPParam;
 import com.cnki.request.IRequestTransverter;
 import com.cnki.util.JsonUtil;
 import com.google.common.base.Splitter;
-import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.param.DocFieldName;
-import com.kmzyc.search.param.HTTPParam;
 
 public class AppParamsTransverter implements IRequestTransverter {
 

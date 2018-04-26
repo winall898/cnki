@@ -3,7 +3,7 @@ package com.kmzyc.search.app.util;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.kmzyc.search.config.Channel;
+import com.cnki.config.Channel;
 
 
 /**
