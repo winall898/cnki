@@ -313,24 +313,6 @@
 	  <version>2.3.20</version>
 	</dependency>
 	
-	<!-- pinyin4j -->
-	<dependency>
-		<groupId>thirdparty.net.sourceforge.pinyin4j</groupId>
-		<artifactId>pinyin4j</artifactId>
-		<version>2.5.0</version>
-	</dependency>
-
-	<!-- mq -->
-	<dependency>
-		<groupId>org.apache.activemq</groupId>
-		<artifactId>activemq-core</artifactId>
-		<version>5.5.0</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.activemq</groupId>
-		<artifactId>activemq-pool</artifactId>
-		<version>5.5.0</version>
-	</dependency>
 	<dependency>
 		<groupId>net.sf.json-lib</groupId>
 		<artifactId>json-lib</artifactId>
@@ -344,11 +326,13 @@
 		<version>1.4</version>
 		<classifier>min</classifier>
 	</dependency>
+	
 	<dependency>
 		<groupId>org.ansj</groupId>
 		<artifactId>tree_split</artifactId>
 		<version>1.3</version>
 	</dependency>
+	
 	<dependency>
 		<groupId>net.sourceforge.findbugs</groupId>
 		<artifactId>jsr305</artifactId>
@@ -415,12 +399,6 @@
 		<artifactId>javax.inject</artifactId>
 		<version>1</version>
 	</dependency>		
-	
-	<dependency>
-		<groupId>org.apache</groupId>
-		<artifactId>dom4j</artifactId>
-		<version>1.3</version>
-	</dependency>
         
     <dependency>
     	<groupId>org.springframework.data</groupId>
