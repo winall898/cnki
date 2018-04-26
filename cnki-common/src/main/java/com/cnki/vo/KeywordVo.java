@@ -1,30 +1,22 @@
-package com.cnki.app.model;
+package com.cnki.vo;
 
 import java.util.Date;
 
 /**
- * 同义词对象
+ * 关键词分词对象
  * 
  * @author KM
  *
  */
-public class SynonymVo {
+public class KeywordVo {
   /**
    * ID
    */
   private Long id;
   /**
-   * 
+   * 分词
    */
   private String keyword;
-  /**
-   * 双向同义词
-   */
-  private String synonymWord;
-  /**
-   * 单向同义词
-   */
-  private String unidirWord;
   /**
    * 说明
    */
@@ -64,22 +56,6 @@ public class SynonymVo {
 
   public void setKeyword(String keyword) {
     this.keyword = keyword;
-  }
-
-  public String getSynonymWord() {
-    return synonymWord;
-  }
-
-  public void setSynonymWord(String synonymWord) {
-    this.synonymWord = synonymWord;
-  }
-
-  public String getUnidirWord() {
-    return unidirWord;
-  }
-
-  public void setUnidirWord(String unidirWord) {
-    this.unidirWord = unidirWord;
   }
 
   public String getDescription() {

@@ -8,115 +8,115 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cnki.app.dao.KeywordDao;
-import com.cnki.app.model.KeywordVo;
-import com.cnki.app.model.PageVo;
 import com.cnki.app.service.KeywordService;
+import com.cnki.vo.KeywordVo;
+import com.cnki.vo.PageVo;
 
 @Service("keywordService")
 public class KeywordServiceImpl implements KeywordService {
 
-  @Autowired
-  private KeywordDao keywordDao;
+    @Autowired
+    private KeywordDao keywordDao;
 
-  @Override
-  public int getKeywordCount(String keyword) {
+    @Override
+    public int getKeywordCount(String keyword) {
 
-    if (StringUtils.isNotBlank(keyword)) {
-      keyword = "%" + keyword.trim() + "%";
+        if (StringUtils.isNotBlank(keyword)) {
+            keyword = "%" + keyword.trim() + "%";
+        }
+
+        return keywordDao.getKeywordCount(keyword);
     }
 
-    return keywordDao.getKeywordCount(keyword);
-  }
 
+    @Override
+    public List<KeywordVo> getKeywordList(String keyword, PageVo page) {
+        if (page == null) {
 
-  @Override
-  public List<KeywordVo> getKeywordList(String keyword, PageVo page) {
-    if (page == null) {
+            return Collections.emptyList();
+        }
 
-      return Collections.emptyList();
+        if (StringUtils.isNotBlank(keyword)) {
+            keyword = "%" + keyword.trim() + "%";
+        }
+
+        return keywordDao.getKeywordList(keyword, page);
     }
 
-    if (StringUtils.isNotBlank(keyword)) {
-      keyword = "%" + keyword.trim() + "%";
+
+    @Override
+    public KeywordVo getKeywordById(Long id) {
+        if (id == null) {
+
+            return null;
+        }
+
+        return keywordDao.getKeywordById(id);
     }
 
-    return keywordDao.getKeywordList(keyword, page);
-  }
 
+    @Override
+    public void addKeyword(KeywordVo keywordVo) {
+        if (keywordVo == null) {
 
-  @Override
-  public KeywordVo getKeywordById(Long id) {
-    if (id == null) {
+            return;
+        }
 
-      return null;
+        // 执行添加
+        keywordDao.addKeyword(keywordVo);
     }
 
-    return keywordDao.getKeywordById(id);
-  }
 
+    @Override
+    public void updateKeyword(KeywordVo keywordVo) {
+        if (keywordVo == null) {
 
-  @Override
-  public void addKeyword(KeywordVo keywordVo) {
-    if (keywordVo == null) {
+            return;
+        }
 
-      return;
+        // 执行修改
+        keywordDao.updateKeyword(keywordVo);
     }
 
-    // 执行添加
-    keywordDao.addKeyword(keywordVo);
-  }
 
+    @Override
+    public void deleteKeywordById(Long id) {
+        if (id == null) {
 
-  @Override
-  public void updateKeyword(KeywordVo keywordVo) {
-    if (keywordVo == null) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        keywordDao.deleteKeywordById(id);
     }
 
-    // 执行修改
-    keywordDao.updateKeyword(keywordVo);
-  }
 
+    @Override
+    public void batchDeleteKeyword(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
 
-  @Override
-  public void deleteKeywordById(Long id) {
-    if (id == null) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        keywordDao.batchDeleteKeyword(ids);
     }
 
-    // 执行删除
-    keywordDao.deleteKeywordById(id);
-  }
 
+    @Override
+    public boolean isExistKeyword(String keyword, String id) {
+        if (StringUtils.isBlank(keyword)) {
 
-  @Override
-  public void batchDeleteKeyword(List<Long> ids) {
-    if (ids == null || ids.isEmpty()) {
+            return false;
+        }
 
-      return;
+        int count = keywordDao.getCountByKeyword(keyword, id);
+
+        if (count > 0) {
+
+            return true;
+        }
+
+        return false;
     }
-
-    // 执行删除
-    keywordDao.batchDeleteKeyword(ids);
-  }
-
-
-  @Override
-  public boolean isExistKeyword(String keyword, String id) {
-    if (StringUtils.isBlank(keyword)) {
-
-      return false;
-    }
-
-    int count = keywordDao.getCountByKeyword(keyword, id);
-
-    if (count > 0) {
-
-      return true;
-    }
-
-    return false;
-  }
 }

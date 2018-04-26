@@ -8,137 +8,137 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cnki.app.dao.SynonymDao;
-import com.cnki.app.model.PageVo;
-import com.cnki.app.model.SynonymVo;
 import com.cnki.app.service.SynonymService;
+import com.cnki.vo.PageVo;
+import com.cnki.vo.SynonymVo;
 
 @Service("synonymService")
 public class SynonymServiceImpl implements SynonymService {
 
-  @Autowired
-  private SynonymDao synonymDao;
+    @Autowired
+    private SynonymDao synonymDao;
 
-  @Override
-  public int getSynonymCount(SynonymVo synonymVo) {
-    if (synonymVo == null) {
+    @Override
+    public int getSynonymCount(SynonymVo synonymVo) {
+        if (synonymVo == null) {
 
-      return 0;
+            return 0;
+        }
+
+        // 原始词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
+        // 双向同义词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
+        // 单向同义词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
+
+        return synonymDao.getSynonymCount(synonymVo);
     }
 
-    // 原始词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
-    }
-    // 双向同义词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
-    }
-    // 单向同义词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
-    }
 
-    return synonymDao.getSynonymCount(synonymVo);
-  }
+    @Override
+    public List<SynonymVo> getSynonymList(SynonymVo synonymVo, PageVo page) {
+        if (page == null || synonymVo == null) {
 
+            return Collections.emptyList();
+        }
 
-  @Override
-  public List<SynonymVo> getSynonymList(SynonymVo synonymVo, PageVo page) {
-    if (page == null || synonymVo == null) {
+        // 原始词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
+        // 双向同义词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
+        // 单向同义词
+        if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
+            synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        }
 
-      return Collections.emptyList();
-    }
-
-    // 原始词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
-    }
-    // 双向同义词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
-    }
-    // 单向同义词
-    if (StringUtils.isNotBlank(synonymVo.getKeyword())) {
-      synonymVo.setKeyword("%" + synonymVo.getKeyword().trim() + "%");
+        return synonymDao.getSynonymList(synonymVo, page);
     }
 
-    return synonymDao.getSynonymList(synonymVo, page);
-  }
 
+    @Override
+    public SynonymVo getSynonymById(Long id) {
+        if (id == null) {
 
-  @Override
-  public SynonymVo getSynonymById(Long id) {
-    if (id == null) {
+            return null;
+        }
 
-      return null;
+        return synonymDao.getSynonymById(id);
     }
 
-    return synonymDao.getSynonymById(id);
-  }
 
+    @Override
+    public void addSynonym(SynonymVo synonymVo) {
+        if (synonymVo == null) {
 
-  @Override
-  public void addSynonym(SynonymVo synonymVo) {
-    if (synonymVo == null) {
+            return;
+        }
 
-      return;
+        // 执行添加
+        synonymDao.addSynonym(synonymVo);
     }
 
-    // 执行添加
-    synonymDao.addSynonym(synonymVo);
-  }
 
+    @Override
+    public void updateSynonym(SynonymVo synonymVo) {
+        if (synonymVo == null) {
 
-  @Override
-  public void updateSynonym(SynonymVo synonymVo) {
-    if (synonymVo == null) {
+            return;
+        }
 
-      return;
+        // 执行修改
+        synonymDao.updateSynonym(synonymVo);
     }
 
-    // 执行修改
-    synonymDao.updateSynonym(synonymVo);
-  }
 
+    @Override
+    public void deleteSynonymById(Long id) {
+        if (id == null) {
 
-  @Override
-  public void deleteSynonymById(Long id) {
-    if (id == null) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        synonymDao.deleteSynonymById(id);
     }
 
-    // 执行删除
-    synonymDao.deleteSynonymById(id);
-  }
 
+    @Override
+    public void batchDeleteSynonym(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
 
-  @Override
-  public void batchDeleteSynonym(List<Long> ids) {
-    if (ids == null || ids.isEmpty()) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        synonymDao.batchDeleteSynonym(ids);
     }
 
-    // 执行删除
-    synonymDao.batchDeleteSynonym(ids);
-  }
 
+    @Override
+    public boolean isExistSynonym(String keyword, String id) {
+        if (StringUtils.isBlank(keyword)) {
 
-  @Override
-  public boolean isExistSynonym(String keyword, String id) {
-    if (StringUtils.isBlank(keyword)) {
+            return false;
+        }
 
-      return false;
+        int count = synonymDao.getCountByKeyword(keyword, id);
+
+        if (count > 0) {
+
+            return true;
+        }
+
+        return false;
     }
-
-    int count = synonymDao.getCountByKeyword(keyword, id);
-
-    if (count > 0) {
-
-      return true;
-    }
-
-    return false;
-  }
 }

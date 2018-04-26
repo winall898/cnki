@@ -1,4 +1,4 @@
-package com.cnki.app.model;
+package com.cnki.app.jms;
 
 import java.util.Map;
 

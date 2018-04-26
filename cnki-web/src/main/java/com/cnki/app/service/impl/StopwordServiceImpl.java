@@ -8,115 +8,115 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cnki.app.dao.StopwordDao;
-import com.cnki.app.model.PageVo;
-import com.cnki.app.model.StopwordVo;
 import com.cnki.app.service.StopwordService;
+import com.cnki.vo.PageVo;
+import com.cnki.vo.StopwordVo;
 
 @Service("stopwordService")
 public class StopwordServiceImpl implements StopwordService {
 
-  @Autowired
-  private StopwordDao stopwordDao;
+    @Autowired
+    private StopwordDao stopwordDao;
 
-  @Override
-  public int getStopwordCount(String stopword) {
+    @Override
+    public int getStopwordCount(String stopword) {
 
-    if (StringUtils.isNotBlank(stopword)) {
-      stopword = "%" + stopword.trim() + "%";
+        if (StringUtils.isNotBlank(stopword)) {
+            stopword = "%" + stopword.trim() + "%";
+        }
+
+        return stopwordDao.getStopwordCount(stopword);
     }
 
-    return stopwordDao.getStopwordCount(stopword);
-  }
 
+    @Override
+    public List<StopwordVo> getStopwordList(String stopword, PageVo page) {
+        if (page == null) {
 
-  @Override
-  public List<StopwordVo> getStopwordList(String stopword, PageVo page) {
-    if (page == null) {
+            return Collections.emptyList();
+        }
 
-      return Collections.emptyList();
+        if (StringUtils.isNotBlank(stopword)) {
+            stopword = "%" + stopword.trim() + "%";
+        }
+
+        return stopwordDao.getStopwordList(stopword, page);
     }
 
-    if (StringUtils.isNotBlank(stopword)) {
-      stopword = "%" + stopword.trim() + "%";
+
+    @Override
+    public StopwordVo getStopwordById(Long id) {
+        if (id == null) {
+
+            return null;
+        }
+
+        return stopwordDao.getStopwordById(id);
     }
 
-    return stopwordDao.getStopwordList(stopword, page);
-  }
 
+    @Override
+    public void addStopword(StopwordVo stopwordVo) {
+        if (stopwordVo == null) {
 
-  @Override
-  public StopwordVo getStopwordById(Long id) {
-    if (id == null) {
+            return;
+        }
 
-      return null;
+        // 执行添加
+        stopwordDao.addStopword(stopwordVo);
     }
 
-    return stopwordDao.getStopwordById(id);
-  }
 
+    @Override
+    public void updateStopword(StopwordVo stopwordVo) {
+        if (stopwordVo == null) {
 
-  @Override
-  public void addStopword(StopwordVo stopwordVo) {
-    if (stopwordVo == null) {
+            return;
+        }
 
-      return;
+        // 执行修改
+        stopwordDao.updateStopword(stopwordVo);
     }
 
-    // 执行添加
-    stopwordDao.addStopword(stopwordVo);
-  }
 
+    @Override
+    public void deleteStopwordById(Long id) {
+        if (id == null) {
 
-  @Override
-  public void updateStopword(StopwordVo stopwordVo) {
-    if (stopwordVo == null) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        stopwordDao.deleteStopwordById(id);
     }
 
-    // 执行修改
-    stopwordDao.updateStopword(stopwordVo);
-  }
 
+    @Override
+    public void batchDeleteStopword(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
 
-  @Override
-  public void deleteStopwordById(Long id) {
-    if (id == null) {
+            return;
+        }
 
-      return;
+        // 执行删除
+        stopwordDao.batchDeleteStopword(ids);
     }
 
-    // 执行删除
-    stopwordDao.deleteStopwordById(id);
-  }
 
+    @Override
+    public boolean isExistStopword(String stopword, String id) {
+        if (StringUtils.isBlank(stopword)) {
 
-  @Override
-  public void batchDeleteStopword(List<Long> ids) {
-    if (ids == null || ids.isEmpty()) {
+            return false;
+        }
 
-      return;
+        int count = stopwordDao.getCountByStopword(stopword, id);
+
+        if (count > 0) {
+
+            return true;
+        }
+
+        return false;
     }
-
-    // 执行删除
-    stopwordDao.batchDeleteStopword(ids);
-  }
-
-
-  @Override
-  public boolean isExistStopword(String stopword, String id) {
-    if (StringUtils.isBlank(stopword)) {
-
-      return false;
-    }
-
-    int count = stopwordDao.getCountByStopword(stopword, id);
-
-    if (count > 0) {
-
-      return true;
-    }
-
-    return false;
-  }
 }

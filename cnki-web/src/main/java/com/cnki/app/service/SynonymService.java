@@ -2,8 +2,9 @@ package com.cnki.app.service;
 
 import java.util.List;
 
-import com.cnki.app.model.PageVo;
-import com.cnki.app.model.SynonymVo;
+import com.cnki.vo.PageVo;
+import com.cnki.vo.SynonymVo;
+
 
 /**
  * 词库管理接口

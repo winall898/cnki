@@ -1,4 +1,4 @@
-package com.cnki.app.model;
+package com.cnki.vo;
 
 /**
  * 分页对象
