@@ -6,14 +6,12 @@
     xmlns:tx="http://www.springframework.org/schema/tx"
     xmlns:context="http://www.springframework.org/schema/context"
     xmlns:jee="http://www.springframework.org/schema/jee"
-    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
     xsi:schemaLocation="
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
-    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
    
    <!-- freemaker配置 -->
     <bean id="freemarkerConfig"  
@@ -35,7 +33,7 @@
     <!-- <context:property-placeholder location="classpath:conn.properties"/> --> 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
 		<property name="locations"> 
-			<array>  
+			<list>  
 				<value>classpath:config/mq.properties</value>
 				<value>classpath:config/redis.properties</value>
 				<value>classpath:config/dubbo.properties</value>
@@ -44,7 +42,7 @@
 				<value>classpath:config/quartz.properties</value>
 				<value>classpath:config/zk.properties</value>
 				<value>classpath:config/shiro.properties</value>
-			</array>   
+			</list>   
 		</property>
 	</bean>
 	
@@ -70,15 +68,6 @@
 	<context:component-scan base-package="com.kmzyc.search.app">
 	    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" /> 
 	</context:component-scan>
-	
-	<!-- CuratorFramework的FactoryBean，Spring启动时创建Curator ZK实例。 -->
-	<bean id="zookeeperFactory" class="com.kmzyc.search.config.CuratorFrameworkZKClientFactory" lazy-init="false">
-		<property name="zkConnectionString" value="${zk.host}" />
-	    <property name="connectionTimeoutMs" value="${zk.connect.timeout}" />
-	    <property name="sessionTimeoutMs" value="${zk.session.timeout}" />
-	    <property name="baseSleepTimeMs" value="${zk.sleepTime}" />
-	    <property name="maxRetries" value="${zk.retryTimes}" />
-	</bean>
 	
 	<import resource="spring-datasource.xml" />
 	<import resource="spring-mq.xml" />
