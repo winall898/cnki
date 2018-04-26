@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.jstl;
+package com.cnki.jstl;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

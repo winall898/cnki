@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.jstl;
+package com.cnki.jstl;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

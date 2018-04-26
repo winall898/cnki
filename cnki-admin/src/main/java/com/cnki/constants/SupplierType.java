@@ -1,6 +1,6 @@
 package com.cnki.constants;
 
-import com.kmzyc.admin.config.Configuration;
+import com.cnki.config.Configuration;
 
 /**
  * @ClassName: SupplierType

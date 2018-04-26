@@ -11,7 +11,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.context.request.ServletWebRequest;
 
-import com.kmzyc.search.facade.interceptors.XSSInterceptor;
+import com.cnki.interceptors.XSSInterceptor;
 
 public abstract class AbstractController {
 

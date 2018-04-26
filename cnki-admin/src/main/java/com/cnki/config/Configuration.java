@@ -1,4 +1,4 @@
-package com.kmzyc.admin.config;
+package com.cnki.config;
 
 
 public class Configuration {

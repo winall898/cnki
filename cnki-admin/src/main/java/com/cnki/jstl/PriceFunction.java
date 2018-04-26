@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.jstl;
+package com.cnki.jstl;
 
 /**
  * 自定义价格格式化JSTL标签
