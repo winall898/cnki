@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.action;
+package com.cnki.admin.action;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.admin.cache.CacheUtil;
 import com.google.common.cache.Cache;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.cache.CacheUtil;
 import com.kmzyc.search.facade.constants.ESSortParam;
 import com.kmzyc.search.facade.constants.JSPResource;
 import com.kmzyc.search.facade.service.IB2BESSearchService;

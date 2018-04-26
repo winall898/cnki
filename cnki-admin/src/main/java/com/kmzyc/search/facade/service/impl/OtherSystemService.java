@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.cnki.admin.cache.CacheUtil;
 import com.google.common.cache.Cache;
 import com.google.common.collect.Lists;
 import com.kmzyc.cms.remote.service.ViewProductInfoRemoteService;
@@ -22,7 +23,6 @@ import com.kmzyc.product.remote.service.SaleRankRemoteService;
 import com.kmzyc.promotion.app.vobject.PriceInfo;
 import com.kmzyc.promotion.remote.service.BaseProductRemoteService;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.cache.CacheUtil;
 import com.kmzyc.search.facade.service.IOtherSystemService;
 import com.kmzyc.search.vo.ProductItem;
 import com.pltfm.app.vobject.Category;

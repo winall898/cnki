@@ -3,7 +3,7 @@ package com.kmzyc.search.facade.service;
 import java.util.List;
 import java.util.Map;
 
-import com.kmzyc.search.facade.action.SearchConfig;
+import com.cnki.admin.action.SearchConfig;
 import com.kmzyc.search.facade.vo.Suggest;
 
 public interface IB2BESSearchService {

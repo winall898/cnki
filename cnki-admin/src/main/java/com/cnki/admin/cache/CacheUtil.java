@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.cache;
+package com.cnki.admin.cache;
 
 import java.util.Map;
 import java.util.WeakHashMap;

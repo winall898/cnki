@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.action;
+package com.cnki.admin.action;
 
 import java.io.File;
 import java.net.URLDecoder;

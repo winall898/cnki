@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.cnki.admin.cache.CacheUtil;
 import com.google.common.cache.Cache;
 import com.google.common.collect.Lists;
-import com.kmzyc.search.facade.cache.CacheUtil;
 import com.kmzyc.search.facade.service.IOtherSystemService;
 
 public class TagsUtil {
