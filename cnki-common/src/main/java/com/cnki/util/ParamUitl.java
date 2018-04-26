@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.ArrayUtils;
 
 import com.cnki.param.Action;
 import com.cnki.param.Params;
@@ -31,7 +31,7 @@ public class ParamUitl {
                 temp = entryValue.get(Action.set);
                 targetKey = Action.set;
             }
-            String[] targetArr = ArrayUtils.clone(temp);
+            String[] targetArr = (String[]) ArrayUtils.clone(temp);
 
             Map<Action, String[]> targetValue = new HashMap<Action, String[]>();
             targetValue.put(targetKey, targetArr);

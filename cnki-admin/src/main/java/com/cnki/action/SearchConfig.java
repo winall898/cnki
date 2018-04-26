@@ -3,8 +3,8 @@ package com.cnki.action;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
 
 import com.cnki.param.DocFieldName;
 import com.cnki.param.HTTPParam;

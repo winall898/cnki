@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.time.FastDateFormat;
+import org.apache.commons.lang.time.FastDateFormat;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

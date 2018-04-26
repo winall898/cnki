@@ -7,8 +7,8 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +35,9 @@ public class QueryFilterFunction {
      */
     public static String addFilter(String queryString, String paramName, String paramValue) {
 
-        queryString = StringEscapeUtils.unescapeHtml4(queryString);
-        paramName = StringEscapeUtils.unescapeHtml4(paramName);
-        paramValue = StringEscapeUtils.unescapeHtml4(paramValue);
+        queryString = StringEscapeUtils.unescapeHtml(queryString);
+        paramName = StringEscapeUtils.unescapeHtml(paramName);
+        paramValue = StringEscapeUtils.unescapeHtml(paramValue);
 
         String regex = "(\\?|&+)(" + HTTPParam.f + ")=([^&]*)";
         Pattern pattern = Pattern.compile(regex);
@@ -97,8 +97,8 @@ public class QueryFilterFunction {
      * @return
      */
     public static String delFilter(String queryString, String paramName) {
-        queryString = StringEscapeUtils.unescapeHtml4(queryString);
-        paramName = StringEscapeUtils.unescapeHtml4(paramName);
+        queryString = StringEscapeUtils.unescapeHtml(queryString);
+        paramName = StringEscapeUtils.unescapeHtml(paramName);
 
         Pattern pattern = Pattern.compile("(\\?|&+)(" + HTTPParam.f + ")=([^&]*)");
         Matcher matcher = pattern.matcher(queryString);
@@ -142,9 +142,9 @@ public class QueryFilterFunction {
      * @return
      */
     public static String delFilter(String queryString, String paramName, String paramValue) {
-        queryString = StringEscapeUtils.unescapeHtml4(queryString);
-        paramName = StringEscapeUtils.unescapeHtml4(paramName);
-        paramValue = StringEscapeUtils.unescapeHtml4(paramValue);
+        queryString = StringEscapeUtils.unescapeHtml(queryString);
+        paramName = StringEscapeUtils.unescapeHtml(paramName);
+        paramValue = StringEscapeUtils.unescapeHtml(paramValue);
 
         Pattern pattern = Pattern.compile("(\\?|&+)(" + HTTPParam.f + ")=([^&]*)");
         Matcher matcher = pattern.matcher(queryString);
@@ -187,8 +187,8 @@ public class QueryFilterFunction {
      * @return
      */
     public static boolean contant(String queryString, String paramName) {
-        queryString = StringEscapeUtils.unescapeHtml4(queryString);
-        paramName = StringEscapeUtils.unescapeHtml4(paramName);
+        queryString = StringEscapeUtils.unescapeHtml(queryString);
+        paramName = StringEscapeUtils.unescapeHtml(paramName);
 
         Pattern pattern = Pattern.compile("(\\?|&+)(" + HTTPParam.f + ")=([^&]*)");
         Matcher matcher = pattern.matcher(queryString);
