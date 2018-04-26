@@ -9,10 +9,10 @@ import org.apache.commons.lang3.time.FastDateFormat;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.constants.ORDER;
+import com.cnki.constants.SupplierType;
 import com.google.common.base.Splitter;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.constants.ORDER;
-import com.kmzyc.search.facade.constants.SupplierType;
 import com.kmzyc.search.facade.request.IRequestTransverter;
 import com.kmzyc.search.facade.util.JsonUtil;
 import com.kmzyc.search.param.DocFieldName;

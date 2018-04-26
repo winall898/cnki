@@ -18,15 +18,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.admin.cache.CacheUtil;
+import com.cnki.constants.ESSortParam;
+import com.cnki.constants.JSPResource;
+import com.cnki.vo.Brand;
+import com.cnki.vo.Suggest;
 import com.google.common.cache.Cache;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.constants.ESSortParam;
-import com.kmzyc.search.facade.constants.JSPResource;
 import com.kmzyc.search.facade.service.IB2BESSearchService;
 import com.kmzyc.search.facade.service.IOtherSystemService;
 import com.kmzyc.search.facade.service.SearchDBDataService;
-import com.kmzyc.search.facade.vo.Brand;
-import com.kmzyc.search.facade.vo.Suggest;
 import com.kmzyc.search.param.HTTPParam;
 import com.kmzyc.search.param.ModelAttribute;
 

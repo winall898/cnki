@@ -3,8 +3,8 @@ package com.kmzyc.search.facade.service;
 import java.util.List;
 import java.util.Map;
 
-import com.kmzyc.search.facade.vo.Brand;
-import com.kmzyc.search.facade.vo.SupplierInfo;
+import com.cnki.vo.Brand;
+import com.cnki.vo.SupplierInfo;
 
 /**
  * 搜索服务接口

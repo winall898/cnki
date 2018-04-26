@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.constants;
+package com.cnki.constants;
 
 /**
  * 缓存KEYS

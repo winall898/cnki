@@ -12,8 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.cnki.constants.SupplierType;
 import com.google.common.base.Splitter;
-import com.kmzyc.search.facade.constants.SupplierType;
 import com.kmzyc.search.param.HTTPParam;
 
 /**

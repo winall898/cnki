@@ -7,8 +7,8 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.kmzyc.search.facade.constants.ORDER;
-import com.kmzyc.search.facade.constants.SupplierType;
+import com.cnki.constants.ORDER;
+import com.cnki.constants.SupplierType;
 import com.kmzyc.search.facade.request.IRequestTransverter;
 import com.kmzyc.search.facade.util.ParamUitl;
 import com.kmzyc.search.param.DocFieldName;

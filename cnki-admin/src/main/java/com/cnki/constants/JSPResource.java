@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.constants;
+package com.cnki.constants;
 
 public interface JSPResource {
   String unmatchSearch = "unmatchSearch";

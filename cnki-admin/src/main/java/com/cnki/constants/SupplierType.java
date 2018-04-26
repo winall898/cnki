@@ -1,6 +1,6 @@
-package com.kmzyc.search.facade.constants;
+package com.cnki.constants;
 
-import com.kmzyc.search.facade.config.Configuration;
+import com.kmzyc.admin.config.Configuration;
 
 /**
  * @ClassName: SupplierType

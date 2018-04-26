@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.vo;
+package com.cnki.vo;
 
 import java.io.Serializable;
 

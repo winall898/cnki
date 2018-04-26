@@ -20,13 +20,13 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
+import com.cnki.dao.CategorysDao;
+import com.cnki.dao.ShopMainDao;
+import com.cnki.vo.Brand;
+import com.cnki.vo.SupplierInfo;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.kmzyc.search.facade.dao.CategorysDao;
-import com.kmzyc.search.facade.dao.ShopMainDao;
 import com.kmzyc.search.facade.service.SearchDBDataService;
-import com.kmzyc.search.facade.vo.Brand;
-import com.kmzyc.search.facade.vo.SupplierInfo;
 
 @Service("searchDBDataService")
 public class SearchDBDataServiceImpl implements SearchDBDataService {

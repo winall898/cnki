@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.cnki.admin.action.SearchConfig;
-import com.kmzyc.search.facade.vo.Suggest;
+import com.cnki.vo.Suggest;
 
 public interface IB2BESSearchService {
     /**

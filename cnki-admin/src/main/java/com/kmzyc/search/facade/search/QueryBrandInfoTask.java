@@ -5,9 +5,9 @@ import java.util.concurrent.RecursiveTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.cnki.vo.Brand;
 import com.kmzyc.search.facade.service.SearchDBDataService;
 import com.kmzyc.search.facade.util.ApplicationContextUtil;
-import com.kmzyc.search.facade.vo.Brand;
 
 public class QueryBrandInfoTask extends RecursiveTask<Brand> {
 

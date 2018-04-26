@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cnki.constants.ESSortParam;
 import com.google.common.base.Splitter;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.constants.ESSortParam;
 import com.kmzyc.search.facade.request.IRequestTransverter;
 import com.kmzyc.search.facade.util.JsonUtil;
 import com.kmzyc.search.param.DocFieldName;

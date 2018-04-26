@@ -21,15 +21,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.admin.cache.CacheUtil;
+import com.cnki.constants.APPResultKeys;
+import com.cnki.vo.ReturnResult;
+import com.cnki.vo.Suggest;
 import com.google.common.cache.Cache;
 import com.google.common.collect.Maps;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.constants.APPResultKeys;
 import com.kmzyc.search.facade.service.IAppESSearchService;
 import com.kmzyc.search.facade.service.IOtherSystemService;
 import com.kmzyc.search.facade.util.ParamUitl;
-import com.kmzyc.search.facade.vo.ReturnResult;
-import com.kmzyc.search.facade.vo.Suggest;
 import com.kmzyc.search.param.DocFieldName;
 import com.kmzyc.search.param.HTTPParam;
 

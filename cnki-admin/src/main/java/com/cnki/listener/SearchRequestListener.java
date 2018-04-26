@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.listener;
+package com.cnki.listener;
 
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;

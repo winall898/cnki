@@ -5,9 +5,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.cnki.vo.Suggest;
 import com.kmzyc.search.config.Channel;
 import com.kmzyc.search.exception.SearchException;
-import com.kmzyc.search.facade.vo.Suggest;
 
 public interface IAppESSearchService {
     /**

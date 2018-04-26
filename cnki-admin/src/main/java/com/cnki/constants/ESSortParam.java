@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.constants;
+package com.cnki.constants;
 
 import com.alibaba.fastjson.JSONObject;
 import com.kmzyc.search.param.DocFieldName;

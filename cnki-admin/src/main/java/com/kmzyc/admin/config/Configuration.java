@@ -1,4 +1,4 @@
-package com.kmzyc.search.facade.config;
+package com.kmzyc.admin.config;
 
 
 public class Configuration {
