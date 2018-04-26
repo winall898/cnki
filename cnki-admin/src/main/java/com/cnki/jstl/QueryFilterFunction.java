@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cnki.constants.SupplierType;
+import com.cnki.constant.SupplierType;
 import com.cnki.param.HTTPParam;
 import com.google.common.base.Splitter;
 

@@ -7,8 +7,8 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.cnki.constants.ORDER;
-import com.cnki.constants.SupplierType;
+import com.cnki.constant.ORDER;
+import com.cnki.constant.SupplierType;
 import com.cnki.param.DocFieldName;
 import com.cnki.request.IRequestTransverter;
 import com.cnki.util.ParamUitl;

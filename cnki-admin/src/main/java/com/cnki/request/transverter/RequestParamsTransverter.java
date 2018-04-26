@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cnki.config.Channel;
-import com.cnki.constants.ESSortParam;
+import com.cnki.constant.ESSortParam;
 import com.cnki.param.DocFieldName;
 import com.cnki.param.HTTPParam;
 import com.cnki.request.IRequestTransverter;

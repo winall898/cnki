@@ -1,4 +1,4 @@
-package com.cnki.util;
+package com.cnki.app.util;
 
 import java.util.HashSet;
 import java.util.Set;
