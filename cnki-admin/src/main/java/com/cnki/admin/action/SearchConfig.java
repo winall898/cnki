@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import com.cnki.util.ParamUitl;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
-import com.kmzyc.search.facade.util.ParamUitl;
 import com.kmzyc.search.param.DocFieldName;
 import com.kmzyc.search.param.HTTPParam;
 

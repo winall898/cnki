@@ -20,13 +20,13 @@ import com.alibaba.fastjson.JSONObject;
 import com.cnki.admin.cache.CacheUtil;
 import com.cnki.constants.ESSortParam;
 import com.cnki.constants.JSPResource;
+import com.cnki.service.IB2BESSearchService;
+import com.cnki.service.IOtherSystemService;
+import com.cnki.service.SearchDBDataService;
 import com.cnki.vo.Brand;
 import com.cnki.vo.Suggest;
 import com.google.common.cache.Cache;
 import com.kmzyc.search.config.Channel;
-import com.kmzyc.search.facade.service.IB2BESSearchService;
-import com.kmzyc.search.facade.service.IOtherSystemService;
-import com.kmzyc.search.facade.service.SearchDBDataService;
 import com.kmzyc.search.param.HTTPParam;
 import com.kmzyc.search.param.ModelAttribute;
 
