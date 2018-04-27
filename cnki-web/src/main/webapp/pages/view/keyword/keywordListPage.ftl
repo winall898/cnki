@@ -1,3 +1,28 @@
+<html>
+<meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+<head>
+<script src="/etc/js/jquery-1.8.3.js"></script>
+<script src="/res/js/keyword/keyword.js"></script>
+<link href="/etc/css/style_app.css" rel="stylesheet" type="text/css" />
+<link href="/etc/css/style_sys_skin.css" rel="stylesheet" type="text/css" />
+<link href="/etc/css/iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(function(){
+	var pageCount = parseInt($("#page_count").val());
+	for ( var i=0;i<pageCount;i++){
+		 var oOption = document.createElement("OPTION");   
+		 oOption.value=i+1;   
+		 oOption.text=i+1;   
+		 document.getElementById('pageNo').options.add(oOption); 
+	}
+	
+	document.getElementById('pageNo').value=$("#page_no").val();
+	
+	document.getElementById('pageSize').value=$("#page_size").val();
+});
+</script>
+</head>
+<body >
 <table width="98%" class="list_table" align="center" cellpadding="3"cellspacing="0" border="1">
 	<tr>
 		<th align="center" width="3%">
@@ -90,18 +115,4 @@
 		</td>
 	</tr>
 </table>
-<script type="text/javascript">
-$(function(){
-	var pageCount = parseInt($("#page_count").val());
-	for ( var i=0;i<pageCount;i++){
-		 var oOption = document.createElement("OPTION");   
-		 oOption.value=i+1;   
-		 oOption.text=i+1;   
-		 document.getElementById('pageNo').options.add(oOption); 
-	}
-	
-	document.getElementById('pageNo').value=$("#page_no").val();
-	
-	document.getElementById('pageSize').value=$("#page_size").val();
-});
-</script>
+<body>

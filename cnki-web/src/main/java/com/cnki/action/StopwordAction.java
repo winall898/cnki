@@ -74,7 +74,7 @@ public class StopwordAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoStopword() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/stopword/stopwordPage.ftl");
+        view.setViewName("/pages/view/stopword/stopwordPage");
         return view;
     }
 
@@ -99,7 +99,7 @@ public class StopwordAction extends BaseController {
         int count = stopwordService.getStopwordCount(stopword);
         if (count <= 0) {
             view.addObject("page", page);
-            view.setViewName("/pages/view/stopword/stopwordListPage.ftl");
+            view.setViewName("/pages/view/stopword/stopwordListPage");
             return view;
         }
 
@@ -113,7 +113,7 @@ public class StopwordAction extends BaseController {
         }
 
         view.addObject("page", page);
-        view.setViewName("/pages/view/stopword/stopwordListPage.ftl");
+        view.setViewName("/pages/view/stopword/stopwordListPage");
         return view;
     }
 
@@ -152,7 +152,7 @@ public class StopwordAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoAddStopwordPage() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/stopword/stopwordAddPage.ftl");
+        view.setViewName("/pages/view/stopword/stopwordAddPage");
         return view;
     }
 
@@ -170,7 +170,7 @@ public class StopwordAction extends BaseController {
         if (stopwordVo != null) {
             view.addObject("stopwordVo", stopwordVo);
         }
-        view.setViewName("/pages/view/stopword/stopwordUpdatePage.ftl");
+        view.setViewName("/pages/view/stopword/stopwordUpdatePage");
         return view;
     }
 
@@ -343,7 +343,7 @@ public class StopwordAction extends BaseController {
     public ModelAndView gotoImportStopwordPage() {
 
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/stopword/stopwordImportPage.ftl");
+        view.setViewName("/pages/view/stopword/stopwordImportPage");
         return view;
 
     }

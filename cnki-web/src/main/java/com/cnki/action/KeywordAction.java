@@ -74,7 +74,7 @@ public class KeywordAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoKeyword() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/keyword/keywordPage.ftl");
+        view.setViewName("/pages/view/keyword/keywordPage");
         return view;
     }
 
@@ -99,7 +99,7 @@ public class KeywordAction extends BaseController {
         int count = keywordService.getKeywordCount(keyword);
         if (count <= 0) {
             view.addObject("page", page);
-            view.setViewName("/pages/view/keyword/keywordListPage.ftl");
+            view.setViewName("/pages/view/keyword/keywordListPage");
             return view;
         }
 
@@ -113,7 +113,7 @@ public class KeywordAction extends BaseController {
         }
 
         view.addObject("page", page);
-        view.setViewName("/pages/view/keyword/keywordListPage.ftl");
+        view.setViewName("/pages/view/keyword/keywordListPage");
         return view;
     }
 
@@ -152,7 +152,7 @@ public class KeywordAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoAddKeywordPage() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/keyword/keywordAddPage.ftl");
+        view.setViewName("/pages/view/keyword/keywordAddPage");
         return view;
     }
 
@@ -170,7 +170,7 @@ public class KeywordAction extends BaseController {
         if (keywordVo != null) {
             view.addObject("keywordVo", keywordVo);
         }
-        view.setViewName("/pages/view/keyword/keywordUpdatePage.ftl");
+        view.setViewName("/pages/view/keyword/keywordUpdatePage");
         return view;
     }
 
@@ -344,7 +344,7 @@ public class KeywordAction extends BaseController {
     public ModelAndView gotoImportKeywordPage() {
 
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/keyword/keywordImportPage.ftl");
+        view.setViewName("/pages/view/keyword/keywordImportPage");
         return view;
 
     }

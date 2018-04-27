@@ -74,7 +74,7 @@ public class SynonymAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoSynonym() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/synonym/synonymPage.ftl");
+        view.setViewName("/pages/view/synonym/synonymPage");
         return view;
     }
 
@@ -110,7 +110,7 @@ public class SynonymAction extends BaseController {
         int count = synonymService.getSynonymCount(synonymVo);
         if (count <= 0) {
             view.addObject("page", page);
-            view.setViewName("/pages/view/synonym/synonymListPage.ftl");
+            view.setViewName("/pages/view/synonym/synonymListPage");
             return view;
         }
 
@@ -124,7 +124,7 @@ public class SynonymAction extends BaseController {
         }
 
         view.addObject("page", page);
-        view.setViewName("/pages/view/synonym/synonymListPage.ftl");
+        view.setViewName("/pages/view/synonym/synonymListPage");
         return view;
     }
 
@@ -163,7 +163,7 @@ public class SynonymAction extends BaseController {
     @ResponseBody
     public ModelAndView gotoAddSynonymPage() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/synonym/synonymAddPage.ftl");
+        view.setViewName("/pages/view/synonym/synonymAddPage");
         return view;
     }
 
@@ -181,7 +181,7 @@ public class SynonymAction extends BaseController {
         if (synonymVo != null) {
             view.addObject("synonymVo", synonymVo);
         }
-        view.setViewName("/pages/view/synonym/synonymUpdatePage.ftl");
+        view.setViewName("/pages/view/synonym/synonymUpdatePage");
         return view;
     }
 
@@ -366,7 +366,7 @@ public class SynonymAction extends BaseController {
     public ModelAndView gotoImportSynonymPage() {
 
         ModelAndView view = new ModelAndView();
-        view.setViewName("/pages/view/synonym/synonymImportPage.ftl");
+        view.setViewName("/pages/view/synonym/synonymImportPage");
         return view;
 
     }
