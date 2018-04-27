@@ -3,7 +3,8 @@ package com.cnki.service;
 import java.util.List;
 import java.util.Map;
 
-import com.cnki.vo.ProductItem;
+import com.cnki.model.ProductItem;
+
 
 
 /**

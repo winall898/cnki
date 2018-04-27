@@ -17,7 +17,7 @@
            http://www.springframework.org/schema/task/spring-task.xsd">
     
     
-	<context:component-scan base-package="com.kmzyc"/>
+	<context:component-scan base-package="com.cnki"/>
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
 	<!-- 加载配置文件,有两种方式 -->
@@ -26,10 +26,7 @@
 		<property name="locations"> 
 			<list>
 				<value>classpath:config/jdbc.properties</value>
-				<value>classpath:config/dubbo.properties</value>
-				<value>classpath:config/cms.properties</value>
 				<value>classpath:config/config.properties</value>
-				<value>classpath:config/zk.properties</value>
 			</list> 
 		</property>
 	</bean> 

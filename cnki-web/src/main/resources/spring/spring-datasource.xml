@@ -34,7 +34,7 @@
 
     <!-- mybatis.spring自动映射 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.kmzyc.search.app.dao"/>
+        <property name="basePackage" value="com.cnki.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
     

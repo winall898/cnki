@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cnki.config.Channel;
+import com.cnki.model.Facter;
+import com.cnki.model.ProductItem;
 import com.cnki.param.HTTPParam;
 import com.cnki.param.ModelAttribute;
-import com.cnki.vo.Facter;
-import com.cnki.vo.ProductItem;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

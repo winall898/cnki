@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cnki.dao.SynonymDao" >
-  	<resultMap id="synonymResultMap" type="com.kmzyc.search.app.model.SynonymVo" >
+  	<resultMap id="synonymResultMap" type="com.cnki.vo.SynonymVo" >
 	    <id column="ID" property="id"/>
 	    <result column="KEYWORD" property="keyword"/>
 	    <result column="SYNONYM_WORD" property="synonymWord"/>
@@ -13,7 +13,7 @@
 	    <result column="UPDATE_TIME" property="updateTime"/>
   	</resultMap>
   
-  	<select id="getSynonymCount" parameterType="com.kmzyc.search.app.model.SynonymVo" resultType="int">
+  	<select id="getSynonymCount" parameterType="com.cnki.vo.SynonymVo" resultType="int">
 		select 
 		  	count(1)
 	   	from 
@@ -84,7 +84,7 @@
 			T.ID = #{id}
 	</select>
 	
-	<insert id="addSynonym" parameterType="com.kmzyc.search.app.model.SynonymVo">
+	<insert id="addSynonym" parameterType="com.cnki.vo.SynonymVo">
 		insert into SEARCH_SYNONYM_DICT_T(
 			ID,
 		  	KEYWORD, 
@@ -107,7 +107,7 @@
          	#{synonymVo.updateTime})
 	</insert>
 	
-	<update id="updateSynonym" parameterType="com.kmzyc.search.app.model.SynonymVo">
+	<update id="updateSynonym" parameterType="com.cnki.vo.SynonymVo">
 		update 
 			SEARCH_SYNONYM_DICT_T
 		set 

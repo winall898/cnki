@@ -60,7 +60,7 @@
     
     <!-- 开启注解扫描 -->
     <context:annotation-config />
-	<context:component-scan base-package="com.cnki">
+	<context:component-scan base-package="com.cnki" use-default-filters="false">
 	    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" /> 
 	</context:component-scan>
 	

@@ -1,4 +1,4 @@
-package com.cnki.vo;
+package com.cnki.model;
 
 import java.io.Serializable;
 import java.util.List;

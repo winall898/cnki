@@ -2,7 +2,6 @@ package com.cnki.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.cnki.vo.KeywordVo;
@@ -18,7 +17,7 @@ public interface KeywordDao {
      * @param userName
      * @return
      */
-    public int getKeywordCount(@Param("keyword") String keyword);
+    public int getKeywordCount(String keyword);
 
     /**
      * 获取分词列表
@@ -26,8 +25,7 @@ public interface KeywordDao {
      * @param userName
      * @return
      */
-    public List<KeywordVo> getKeywordList(@Param("keyword") String keyword,
-            @Param("page") PageVo page);
+    public List<KeywordVo> getKeywordList(String keyword, PageVo page);
 
     /**
      * 根据ID获取分词
@@ -35,35 +33,35 @@ public interface KeywordDao {
      * @param id
      * @return
      */
-    public KeywordVo getKeywordById(@Param("id") Long id);
+    public KeywordVo getKeywordById(Long id);
 
     /**
      * 添加
      * 
      * @param keywordVo
      */
-    public void addKeyword(@Param("keywordVo") KeywordVo keywordVo);
+    public void addKeyword(KeywordVo keywordVo);
 
     /**
      * 修改
      * 
      * @param id
      */
-    public void updateKeyword(@Param("keywordVo") KeywordVo keywordVo);
+    public void updateKeyword(KeywordVo keywordVo);
 
     /**
      * 根据ID删除分词
      * 
      * @param id
      */
-    public void deleteKeywordById(@Param("id") Long id);
+    public void deleteKeywordById(Long id);
 
     /**
      * 根据ID集合批量删除
      * 
      * @param ids
      */
-    public void batchDeleteKeyword(@Param("ids") List<Long> ids);
+    public void batchDeleteKeyword(List<Long> ids);
 
     /**
      * 根据分词获取数量
@@ -72,5 +70,5 @@ public interface KeywordDao {
      * @param id
      * @return
      */
-    public int getCountByKeyword(@Param("keyword") String keyword, @Param("id") String id);
+    public int getCountByKeyword(String keyword, String id);
 }

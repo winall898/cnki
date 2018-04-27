@@ -3,8 +3,9 @@ package com.cnki.service.impl;
 import java.util.Collections;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cnki.dao.KeywordDao;
@@ -15,7 +16,7 @@ import com.cnki.vo.PageVo;
 @Service("keywordService")
 public class KeywordServiceImpl implements KeywordService {
 
-    @Autowired
+    @Resource
     private KeywordDao keywordDao;
 
     @Override

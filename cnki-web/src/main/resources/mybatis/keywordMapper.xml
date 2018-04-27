@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cnki.dao.KeywordDao" >
-  	<resultMap id="keywordResultMap" type="com.cnki.model.KeywordVo" >
+  	<resultMap id="keywordResultMap" type="com.cnki.vo.KeywordVo" >
 	    <id column="ID" property="id"/>
 	    <result column="KEYWORD" property="keyword"/>
 	    <result column="DESCRIPTION" property="description"/>
@@ -66,7 +66,7 @@
 			T.ID = #{id}
 	</select>
 	
-	<insert id="addKeyword" parameterType="com.kmzyc.search.app.model.KeywordVo">
+	<insert id="addKeyword" parameterType="com.cnki.vo.KeywordVo">
 		insert into SEARCH_KEYWORD_DICT_T(
 			ID,
 			KEYWORD,
@@ -85,7 +85,7 @@
          	#{keywordVo.updateTime})
 	</insert>
 	
-	<update id="updateKeyword" parameterType="com.kmzyc.search.app.model.KeywordVo">
+	<update id="updateKeyword" parameterType="com.cnki.vo.KeywordVo">
 		update 
 			SEARCH_KEYWORD_DICT_T
 		set 

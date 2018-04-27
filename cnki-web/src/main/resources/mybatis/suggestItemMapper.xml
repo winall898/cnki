@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cnki.dao.SuggestItemDAO" >
-  	<resultMap id="suggestItemDOResultMap" type="com.kmzyc.search.app.model.SuggestItem" >
+  	<resultMap id="suggestItemDOResultMap" type="com.cnki.model.SuggestItem" >
 	    <result property="id" column="ID" />
 	    <result property="source" column="SOURCE" />
 	    <result property="term" column="TERM" />
@@ -76,7 +76,7 @@
 		</if>
   	</sql>
   	
-  	<insert id="insertSuggestItemDO" parameterType="com.kmzyc.search.app.model.SuggestItem" >
+  	<insert id="insertSuggestItemDO" parameterType="com.cnki.model.SuggestItem" >
 	  	<selectKey resultType="java.lang.Integer" keyProperty="id" >
 	      select seq_app_suggest_item.nextval from dual
 	    </selectKey>
@@ -100,7 +100,7 @@
      		#{channel})
   	</insert>
   	
-  	<update id="updateSuggestItemDO" parameterType="com.kmzyc.search.app.model.SuggestItem" >
+  	<update id="updateSuggestItemDO" parameterType="com.cnki.model.SuggestItem" >
 	    UPDATE APP_SUGGEST_ITEM set
 	    <trim prefix="SET" suffixOverrides=",">
 			<if test="source != null">
@@ -146,7 +146,7 @@
 	     	ID = #{id}
   	</delete>
   	
-  	<select id="countSuggestItemDOByExample" parameterType="com.kmzyc.search.app.model.SuggestItem" resultType="java.lang.Integer" >
+  	<select id="countSuggestItemDOByExample" parameterType="com.cnki.model.SuggestItem" resultType="java.lang.Integer" >
 	    SELECT 
 	    	COUNT(ID) AS num 
 	    FROM 
@@ -154,7 +154,7 @@
 	    <include refid="doQueryParams" />
   	</select>
   	
-  	<select id="findListByExample" resultMap="suggestItemDOResultMap" parameterType="com.kmzyc.search.app.model.SuggestItem" >
+  	<select id="findListByExample" resultMap="suggestItemDOResultMap" parameterType="com.cnki.model.SuggestItem" >
      	SELECT 
     		<include refid="suggestItem_do_columns" />
      	FROM 
@@ -162,7 +162,7 @@
     	<include refid="doQueryParams" />
   	</select>
   	
-  	<select id="findPageByVo" parameterType="com.kmzyc.search.app.model.SuggestItem" resultMap="suggestItemDOResultMap">
+  	<select id="findPageByVo" parameterType="com.cnki.model.SuggestItem" resultMap="suggestItemDOResultMap">
 		SELECT 
 			ID, 
 			SOURCE, 
